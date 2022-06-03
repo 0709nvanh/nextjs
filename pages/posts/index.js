@@ -12,7 +12,7 @@ export default function Posts({posts}) {
         <Card key={item.id}>
           <Card.Body>
           <Card.Title>{item.title}</Card.Title>
-          <Link href={`/post/${item.id}`}>
+          <Link href={`/posts/${item.id}`}>
             <Button variant="primary">See more</Button>
           </Link>
         </Card.Body>
