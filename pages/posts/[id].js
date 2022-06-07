@@ -1,5 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
-import { Card } from 'react-bootstrap'
+import { Button, Card } from 'react-bootstrap'
 import Layout from '../../components/Layout'
 import { getOnePost, getPostById } from '../../lib/posts'
 
@@ -7,9 +8,10 @@ export default function Detail({ post }) {
   return <Layout>
         <h2>Detail post </h2>
         <Card.Title>{post.title}</Card.Title>
-            <Card.Text>
-            {post.description}
-            </Card.Text>
+            <Card.Text>{post.description}</Card.Text>
+            <Link href={`/posts`}>
+                <Button variant="primary">Back</Button>
+            </Link>
       </Layout>
 }
 
